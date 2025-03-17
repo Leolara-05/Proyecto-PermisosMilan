@@ -150,6 +150,27 @@
                     <div>
                         <!-- Eliminado el título "Permisos Milan" -->
                     </div>
+                    <div class="pagination-buttons">
+                        @if($permisos->previousPageUrl())
+                            <a href="{{ $permisos->previousPageUrl() }}" class="btn btn-outline-primary me-2">
+                                <i class="fas fa-arrow-left me-1"></i> Página Anterior
+                            </a>
+                        @else
+                            <button class="btn btn-outline-secondary me-2" disabled>
+                                <i class="fas fa-arrow-left me-1"></i> Página Anterior
+                            </button>
+                        @endif
+                        
+                        @if($permisos->nextPageUrl())
+                            <a href="{{ $permisos->nextPageUrl() }}" class="btn btn-outline-primary">
+                                Página Siguiente <i class="fas fa-arrow-right ms-1"></i>
+                            </a>
+                        @else
+                            <button class="btn btn-outline-secondary" disabled>
+                                Página Siguiente <i class="fas fa-arrow-right ms-1"></i>
+                            </button>
+                        @endif
+                    </div>
                     <div>
                         <!-- Eliminado el botón "Nuevo Permiso" -->
                         <!-- Eliminado el botón "Generar Informe" -->
